@@ -1,0 +1,195 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: arial;
+}
+header{
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0px 0px 10px 10px #dedede;
+	color: #333333;
+}
+#principal{
+	width: 80%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 400px 1fr;
+}
+#principal main{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ESTILO DO FORMULÁRIO */
+
+#principal main form, #modalFormEditar form{
+	width: 300px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	margin-top: 50px;
+	background-color: white
+}
+#principal main form .input, #modalFormEditar form .input{
+	padding: 8px;
+	margin-bottom: 5px;
+	border: 1px solid #dedede;
+	outline: none;
+	border-radius: 3px;
+}
+#principal main form input[type=submit], #modalFormEditar form input[type=submit], #modalFormEditar form button{
+	padding: 10px;
+	margin-top: 15px;
+	background-color: #0089fa;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	cursor: pointer;
+}
+#principal main form h5, #modalFormEditar form h5{
+	font-size: 15px;
+	margin-bottom: 20px;
+	color: #333333;
+}
+
+/* ESTILO DA TABELA */
+
+#principal main table{
+	border-collapse: collapse;
+	table-layout: fixed;
+	width: 600px;
+	margin-top: 50px;
+}
+#principal main table tr td, #principal main table tr th{
+	vertical-align: middle;
+	padding: 10px;
+	font-size: 12px;
+	text-align: center;
+}
+#principal main table tr td i{
+	cursor: pointer;
+	margin: 5px;
+}
+#principal main table tr{
+	border: 1px solid #dedede;
+}
+#principal main table #tdMais{
+	border: none;
+}
+#principal main table #tdMais .btnMais{
+	width: 20px;
+	height: 20px;
+	border: none;
+	border-radius: 50%;
+	background-color: #0089fa;
+	color: white;
+	cursor: pointer;
+}
+#principal main table .loading{
+	width: 20px;
+	height: 20px;
+	border: 2px solid #dedede;
+	border-left-color: #4287f5;
+	border-radius: 50%;
+	animation: 1s loading linear infinite;
+}
+
+/* ESTILO DA MODAL DE EDITAR */
+
+#modalFormEditar{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9999999999;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+#modalFormEditar form{
+	margin-top: 0px;
+}
+
+#modalFormEditar form button{
+	background-color: #b32802;
+	margin-right: 5px;
+}
+
+/* ESTILO DA MODAL DE LOADING */
+
+#modalLoading{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9999999999;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+#modalLoading div{
+	width: 20px;
+	height: 20px;
+	border: 2px solid #dedede;
+	border-left-color: #4287f5;
+	border-radius: 50%;
+	animation: 1s loading linear infinite;
+}
+@keyframes loading{
+	to{transform: rotate(360deg);}
+}
+
+/* ESTILO DA CAIXA DE MENSAGEM */
+
+#msgbox{
+	padding: 12px;
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, 0.9);
+	color: white;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	font-size: 12px;
+	cursor: pointer;
+	display: none;
+}
+
+/* ESTILO DA MODAL ESCOLHA */
+
+#modalEscolha{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 9999999999;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+#modalEscolha main{
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0px 0px 10px 10px #e3e3e3;
+}
+#modalEscolha main div{
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+#modalEscolha main div button{
+	padding: 8px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	outline: none;
+	margin-left: 10px;
+	border-radius: 3px;
+}
+#modalEscolha main div #btnDeletar{
+	background-color: #b32802;
+	color: white;
+}
